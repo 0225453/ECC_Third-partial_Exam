@@ -1,7 +1,6 @@
 const express = require('express')
 const app = express()
 const bodyParser = require("body-parser");
-
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 const link = require("https");
@@ -86,7 +85,7 @@ app.post("/",(req, res)=>{
     });
 });
 app.post("/next",(req, res)=>{
-    if(id==893){
+    if(id==898){
         id=1;
     }else{
         id++;
@@ -127,7 +126,7 @@ app.post("/next",(req, res)=>{
 });
 app.post("/prev",(req, res)=>{
     if(id==1){
-        id=893;
+        id=898;
     }else{
         id--;
     }
